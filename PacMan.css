@@ -1,0 +1,131 @@
+body {
+	background-color: black;
+}
+#game {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	border: 9px dashed blue;
+	border-radius: 20px;
+	justify-content: space-around;
+	margin: 20px;
+}
+h1 {
+	text-align: center;
+	color: yellow;
+	font-family: 'Press Start 2P', cursive;
+	size: 20px;
+	margin: 30px;
+	animation: shake 2s;
+}
+@keyframes shake {
+	0% {
+		transform: skewX(-15deg);
+	}
+	5% {
+		transform: skewX(15deg);
+	}
+	10% {
+		transform: skewX(-15deg);
+	}
+	15% {
+		transform: skewX(15deg);
+	}
+	20% {
+		transform: skewX(0deg);
+	}
+	100% {
+		transform: skewX(0deg);
+	}
+}
+img {
+	width: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#game .pacman {
+	margin: 15px;
+	width: 0px;
+	height: 0px;
+	border-right: 60px solid transparent;
+	border-top: 60px solid;
+	border-left: 60px solid;
+	border-bottom: 60px solid;
+	border-top-left-radius: 60px;
+	border-top-right-radius: 60px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 60px;
+	color: RGB(255, 255, 0);
+	animation: 1.5s slidein;
+}
+@keyframes slidein {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+#game .clockwise {
+	animation-name: spin;
+	animation-duration: 3000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+#game .counterclockwise {
+	animation-name: spin;
+	animation-duration: 1500ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+#game .mouthClosed {
+	margin: 15px;
+	width: 0px;
+	border-right: 60px solid;
+	border-top: 60px solid;
+	border-left: 60px solid;
+	border-bottom: 60px solid;
+	border-top-left-radius: 60px;
+	border-top-right-radius: 60px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 60px;
+}
+
+footer {
+	text-align: center;
+	color: yellow;
+	font-family: 'Press Start 2P', cursive;
+	font-size: .75em;
+	margin-top: 100px;
+
+	animation: fadeIn 7s;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 25%;
+	}
+
+	100% {
+		opacity: 100%;
+	}
+}
