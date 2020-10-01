@@ -60,7 +60,6 @@ function createDivsForColors(colorArray) {
 function newCards(event) {
 	if (!cardOne) {
 		cardOne = event.target;
-		console.log();
 		cardOne.style.color = event.target.classList[0];
 		getTwoCards = true;
 	} else if (cardOne && !cardTwo) {
@@ -90,10 +89,8 @@ function handleCardClick(event) {
 			cardTwo = null;
 			noClicking = false;
 		}, 1000);
-		console.log('No match');
 	} else {
 		// the background colors match: remove event listener for matched cards, reset cards 1&2, "open (noClicking) door"
-		console.log("It's a match!");
 		cardsFlipped += 2;
 		cardOne.removeEventListener('click', handleCardClick);
 		cardTwo.removeEventListener('click', handleCardClick);
